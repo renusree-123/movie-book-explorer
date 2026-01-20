@@ -40,7 +40,7 @@ app.get("/books", async (req, res) => {
     res.status(500).send(error.message);
   }
 });
-
-app.listen(5000, () =>
+const PORT=process.env.PORT;
+app.listen(PORT, () =>
   console.log("Backend running on http://localhost:5000")
 );
